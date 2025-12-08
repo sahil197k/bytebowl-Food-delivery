@@ -1,4 +1,4 @@
-/* --- Variables & Reset --- */
+/* Variables & Reset */
 :root {
     --primary: #ff8301;
     --primary-hover: #e07200;
@@ -180,16 +180,25 @@ h2 {
 }
 
 .header_text h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.header_text .highlight {
+    color: var(--primary);
+    position: relative;
+    display: inline-block;
 }
 
 #header_text-para {
     font-size: 1.1rem;
-    color: var(--text-light);
-    margin-bottom: 2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 450px;
+    margin-bottom: 2.5rem;
 }
 
 .header_text-inputs {
@@ -206,6 +215,7 @@ h2 {
     border-radius: 30px;
     box-shadow: var(--shadow);
     border: 1px solid #eee;
+    margin-bottom: 2rem;
 }
 
 .header_input_group input {
@@ -236,9 +246,44 @@ h2 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
 }
 
-.search_btn img { width: 1rem; }
+.search_btn img { width: 1rem; } 
+
+/* Social Proof */
+.stats_row {
+    display: flex;
+    gap: 3rem;
+}
+
+.stat_num {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.stat_label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* header image */
+.header_image {
+    flex: 1 1 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.header_image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+}
 
 /* Cuisines */
 .cuisine_grid {
@@ -601,11 +646,6 @@ h2 {
       height: 100%;
       object-fit: cover;
     }
-
-
-    .floating-card { 
-        display: none; 
-    } 
 
     .logo_img_footer {
         width: 100px;
